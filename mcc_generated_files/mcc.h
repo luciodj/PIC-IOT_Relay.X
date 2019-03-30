@@ -50,19 +50,20 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include "drivers/timeout.h"
+#include "uart1.h"
+#include "drivers/i2c_master.h"
+#include "delay.h"
+#include "i2c2_driver.h"
 #include "interrupt_manager.h"
 #include "traps.h"
-#include "delay.h"
 #include "tmr2.h"
-#include "adc1.h"
-#include "drivers/spi_master.h"
-#include "drivers/i2c_master.h"
-#include "i2c2_driver.h"
-#include "uart1.h"
-#include "drivers/i2c_simple_master.h"
-#include "drivers/timeout.h"
 #include "spi1_driver.h"
+#include "drivers/i2c_simple_master.h"
+#include "Relay_app.h"
 #include "tmr1.h"
+#include "drivers/spi_master.h"
+#include "adc1.h"
 
 #ifndef _XTAL_FREQ
 #define _XTAL_FREQ  32000000UL

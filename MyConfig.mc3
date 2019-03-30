@@ -9,6 +9,10 @@
          <string>class com.microchip.mcc.mcu16.mainManager.MainManager</string>
       </entry>
       <entry>
+         <string>Relay</string>
+         <string>class com.microchip.mikrobus.relay.Relay</string>
+      </entry>
+      <entry>
          <string>SPI1</string>
          <string>class com.microchip.mcc.foundationservices.mcu16.modules.peripheraldriver.spi_upb.SPI</string>
       </entry>
@@ -49,32 +53,32 @@
          <string>class com.microchip.mcc.libraries.cryptoauthlib.basic.Crypto</string>
       </entry>
       <entry>
-         <string>WATCHDOG</string>
-         <string>class com.microchip.mcc.mcu16.systemManager.wdt.Wdt</string>
+         <string>Pin Module</string>
+         <string>class com.microchip.mcc.mcu16.pinManager.PinManager</string>
       </entry>
       <entry>
          <string>UART</string>
          <string>class com.microchip.mcc.foundationservices.modules.softwaredriver.UART.UART</string>
       </entry>
       <entry>
-         <string>Pin Module</string>
-         <string>class com.microchip.mcc.mcu16.pinManager.PinManager</string>
+         <string>WATCHDOG</string>
+         <string>class com.microchip.mcc.mcu16.systemManager.wdt.Wdt</string>
       </entry>
       <entry>
          <string>ICD</string>
          <string>class com.microchip.mcc.mcu16.systemManager.icd.Icd</string>
       </entry>
       <entry>
-         <string>ADC1</string>
-         <string>class com.microchip.mcc.foundationservices.mcu16.modules.peripheraldriver.adc.ADC</string>
+         <string>WINC</string>
+         <string>class com.microchip.mcc.libraries.networking.winc.WINC</string>
       </entry>
       <entry>
          <string>UART1</string>
          <string>class com.microchip.mcc.foundationservices.mcu16.modules.peripheraldriver.uart.UART</string>
       </entry>
       <entry>
-         <string>WINC</string>
-         <string>class com.microchip.mcc.libraries.networking.winc.WINC</string>
+         <string>ADC1</string>
+         <string>class com.microchip.mcc.foundationservices.mcu16.modules.peripheraldriver.adc.ADC</string>
       </entry>
       <entry>
          <string>System Module</string>
@@ -110,9 +114,10 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.foundationservices.library.FoundationServicesLibrary" version="0.1.32"/>
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" version="1.105"/>
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.libraries.mchpiot.MCHPIoTLibrary" version="1.1.1"/>
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.foundationservices.library.FoundationServicesLibrary" version="0.1.32"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mikroEClickLibrary.MikroEClickLibrary" version="1.0.27"/>
    </usedLibraries>
    <tokenMap class="java.util.HashMap">
       <entry>
@@ -808,6 +813,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="i2cEnable"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ODCB" settingAlias="ODCB14"/>
          <value>disabled</value>
       </entry>
@@ -904,16 +913,16 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR2" name="prescaledFreq"/>
-         <value>16000000.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR1" registerAlias="TCON" settingAlias="TCKPS" alias="1:8"/>
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR2" name="prescaledFreq"/>
+         <value>16000000.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="pubSubSPIMASTERConfigurations"/>
-         <value>8816.556443944337</value>
+         <value>4180.632377463731</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON" settingAlias="COSC" alias="SOSC"/>
@@ -1078,6 +1087,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="ioc RB7"/>
          <value>none</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="intPin"/>
+         <value></value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="ioc RB8"/>
@@ -1716,6 +1729,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="resetPin"/>
+         <value></value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCNB" settingAlias="IOCNB11" alias="disabled"/>
          <value>0</value>
       </entry>
@@ -2088,6 +2105,10 @@
          <value>65535</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="resetEnable"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR1" registerAlias="TCON" settingAlias="TCS"/>
          <value>FOSC/2</value>
       </entry>
@@ -2180,16 +2201,20 @@
          <value>enabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="pwmEnable"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCTUN" settingAlias="TUN" alias="Center Frequency+1.316%"/>
          <value>28</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PIC-IoT WG Sensor Node" name="ledGreenPinKey"/>
-         <value>RC4</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADC1" registerAlias="ADCON1" settingAlias="ADSIDL"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PIC-IoT WG Sensor Node" name="ledGreenPinKey"/>
+         <value>RC4</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCTUN" settingAlias="TUN" alias="Center Frequency-0.470%"/>
@@ -2285,7 +2310,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART" name="pubSubUARTConfigurations"/>
-         <value>9430.60366754947</value>
+         <value>1772.313326241588</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATB" settingAlias="LATB10" alias="clear"/>
@@ -2309,7 +2334,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA0"/>
-         <value>Relay1</value>
+         <value>Relay_RL1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="CLKDIV" settingAlias="DOZE"/>
@@ -2652,6 +2677,10 @@
          <value>6</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="spiSlaveSelect"/>
+         <value></value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCPB" settingAlias="IOCPB2" alias="enabled"/>
          <value>1</value>
       </entry>
@@ -2742,6 +2771,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCHS" settingAlias="CH0SB" alias="AN3"/>
          <value>3</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="uartEnable"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSC" settingAlias="ANSELC3" alias="analog"/>
@@ -2848,12 +2881,12 @@
          <value>CHANNEL_CTMU</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PIC-IoT WG Sensor Node" name="Timeout"/>
-         <value>5000</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCHS" settingAlias="CH0SA" alias="AN4"/>
          <value>4</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PIC-IoT WG Sensor Node" name="Timeout"/>
+         <value>5000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCHS" settingAlias="CH0SA" alias="AN3"/>
@@ -2965,7 +2998,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ANSA"/>
-         <value>11</value>
+         <value>10</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCNB" settingAlias="IOCNB0" alias="disabled"/>
@@ -3316,6 +3349,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="generateExample"/>
+         <value>enabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCPC" settingAlias="IOCPC5" alias="disabled"/>
          <value>0</value>
       </entry>
@@ -3356,12 +3393,12 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR2" name="TMR2_TNIISRFunction"/>
-         <value>ISR_TMR2_TNI</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="I2C2" registerAlias="I2CSTAT" settingAlias="I2COV" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR2" name="TMR2_TNIISRFunction"/>
+         <value>ISR_TMR2_TNI</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADC1" registerAlias="ADCTMENL" settingAlias="CTMEN6"/>
@@ -3433,7 +3470,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="validate"/>
-         <value>0.2456938818108142</value>
+         <value>0.8763763531417799</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCON1" settingAlias="FORM" alias="Absolute fractional result, unsigned, left-justified"/>
@@ -4125,7 +4162,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="I2CSIMPLE" name="pubSubI2CSIMPLE_I2CMASTER/Functions"/>
-         <value>4816.666463085653</value>
+         <value>7636.9719761134365</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCTUN" settingAlias="TUN" alias="Center Frequency+0.141%"/>
@@ -4981,7 +5018,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="16 Bit I2CMASTER" name="pubSub16 Bit I2CMASTER_I2C/Functions"/>
-         <value>414.08691134427465</value>
+         <value>2317.7869107698434</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCON2" settingAlias="SMPI" alias="Generates interrupt after completion of every 21th sample/conversion operation"/>
@@ -5017,7 +5054,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PIC-IoT WG Sensor Node" name="cliStatus"/>
-         <value>true</value>
+         <value>UART</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCPB" settingAlias="IOCPB9" alias="enabled"/>
@@ -5060,12 +5097,12 @@
          <value>3</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PIC-IoT WG Sensor Node" name="lightSensorPinKey"/>
-         <value>RB12</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADC1" registerAlias="ADCTMENL" settingAlias="CTMEN10"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PIC-IoT WG Sensor Node" name="lightSensorPinKey"/>
+         <value>RB12</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="I2C2" registerAlias="I2CSTAT" settingAlias="IWCOL"/>
@@ -5557,7 +5594,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RC6"/>
-         <value>output</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="SPI1" registerAlias="SPICON1L" settingAlias="SSEN" alias="enabled"/>
@@ -5697,7 +5734,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA0"/>
-         <value>output</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA2"/>
@@ -6704,12 +6741,12 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCON" settingAlias="TECS" alias="SOSC"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADC1" registerAlias="ADCON1" settingAlias="DMAEN"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCON" settingAlias="TECS" alias="SOSC"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RPOR13" settingAlias="RP26R"/>
@@ -6997,7 +7034,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART" name="validate"/>
-         <value>0.06240337520908046</value>
+         <value>0.009513904689991803</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCFC" settingAlias="IOCFC3" alias="enabled"/>
@@ -7162,6 +7199,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC1" name="Scan_Count"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="intEnable"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TIMEOUTDRIVER" name="TIMEOUTDRIVER_TIMER/genericTimeoutInterfaceV2"/>
@@ -7760,12 +7801,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR2" name="timerExtPinSelection"/>
-         <value>FALSE</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="SPI1" registerAlias="SPICON1H" settingAlias="AUDMOD" alias="Right Justified"/>
          <value>2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR2" name="timerExtPinSelection"/>
+         <value>FALSE</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ODCC" settingAlias="ODCC3" alias="enabled"/>
@@ -7781,6 +7822,10 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ODCB" settingAlias="ODCB5"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="spiEnable"/>
          <value>disabled</value>
       </entry>
       <entry>
@@ -7817,7 +7862,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSA" settingAlias="ANSELA0"/>
-         <value>analog</value>
+         <value>digital</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="DCOTUN" settingAlias="DCOTUN"/>
@@ -8096,6 +8141,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="relay1Pin"/>
+         <value>RA0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCFA" settingAlias="IOCFA13"/>
          <value>disabled</value>
       </entry>
@@ -8157,10 +8206,6 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCFB" settingAlias="IOCFB6" alias="enabled"/>
-         <value>1</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART1" registerAlias="UMODE" settingAlias="UEN" alias="TX_RX_RTS"/>
          <value>1</value>
       </entry>
       <entry>
@@ -8321,7 +8366,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TIMEOUTDRIVER" name="pubSubTIMEOUTDRIVER_TIMER/genericTimeoutInterfaceV2"/>
-         <value>8537.828381579884</value>
+         <value>4273.829873196058</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ODCA" settingAlias="ODCA8" alias="enabled"/>
@@ -9588,11 +9633,11 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR2" registerAlias="TMR" settingAlias="TMR"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCTMENH" settingAlias="CTMEN29" alias="disabled"/>
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCTMENH" settingAlias="CTMEN29" alias="disabled"/>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR2" registerAlias="TMR" settingAlias="TMR"/>
          <value>0</value>
       </entry>
       <entry>
@@ -9756,12 +9801,12 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="TimerFrequency"/>
-         <value>16000000</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="SPI1" registerAlias="SPICON1L" settingAlias="SPIFE"/>
          <value>Frame Sync pulse precedes</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="TimerFrequency"/>
+         <value>16000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCON5" settingAlias="CM" alias="Outside Window mode"/>
@@ -9929,7 +9974,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RC6"/>
-         <value>Relay2</value>
+         <value>Relay_RL2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCNB" settingAlias="IOCNB13"/>
@@ -10196,6 +10241,10 @@
          <value>disabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="adcEnable"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RPOR7"/>
          <value>0</value>
       </entry>
@@ -10348,6 +10397,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="MIKROBASE_CustomKeyName"/>
+         <value>InitialValue</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCFB" settingAlias="IOCFB11" alias="enabled"/>
          <value>1</value>
       </entry>
@@ -10436,6 +10489,10 @@
          <value>disabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="analogPin"/>
+         <value></value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCNB" settingAlias="IOCNB11"/>
          <value>disabled</value>
       </entry>
@@ -10517,7 +10574,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="pubSubmsspSubscriber"/>
-         <value>1016.769445936705</value>
+         <value>1824.4928310499597</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISB" settingAlias="TRISB12" alias="output"/>
@@ -11112,6 +11169,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="isFoundationServicesLibraryLoaded"/>
+         <value>enabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISA" settingAlias="TRISA11" alias="output"/>
          <value>0</value>
       </entry>
@@ -11280,12 +11341,12 @@
          <value>21</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCON3" settingAlias="SAMC" alias="20"/>
-         <value>20</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%0%interruptState"/>
          <value>enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCON3" settingAlias="SAMC" alias="20"/>
+         <value>20</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="SPI1" registerAlias="SPICON1H" settingAlias="FRMCNT"/>
@@ -11312,12 +11373,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="WINC" name="WincnCs"/>
-         <value>RC1</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADC1" registerAlias="ADCON3" settingAlias="SAMC" alias="22"/>
          <value>22</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="WINC" name="WincnCs"/>
+         <value>RC1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="iocUserSet NMCLR"/>
@@ -11482,6 +11543,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART1" registerAlias="UMODE" settingAlias="PDSEL" alias="8N"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Relay" name="relay2Pin"/>
+         <value>RC6</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART1" registerAlias="UMODE" settingAlias="PDSEL" alias="8O"/>
@@ -12307,7 +12372,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.h</file>
-         <hash>60578f0920bbd478264d3137a1c0573b200a31fb971be4f0e145110420e723cb</hash>
+         <hash>31f727365d65732baa9bccd6ea183b18d76bfc01241f169cce68013a980299c8</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mqtt/mqtt_packetTransfer_interface.c</file>
@@ -12319,7 +12384,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/pin_manager.c</file>
-         <hash>ebfc1c88e0d80cad251a7ddbdbe7cc32713410e8c38ebcfe726079d172f9a78d</hash>
+         <hash>f2aa372914feab6e4a9d3bf5fb0dc3b9391894d0bbcf57efd4d4481a6862a317</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/winc/spi_flash/source/spi_flash.c</file>
@@ -12344,6 +12409,14 @@
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/basic/atca_basic_checkmac.c</file>
          <hash>966cbae0cc0261599ea78725f16a9116d3324802a70042fd7467f767e4ecccec</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/Relay_app.c</file>
+         <hash>4165da4646159a1824eef6f7aca57a1d40759c7e3365715008d7a0c72b0e697a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/Relay_app.h</file>
+         <hash>745543ebbdb73d9652d405962dc0217f569571065efe2ff4b2035604511e495a</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/application_manager.h</file>
@@ -12382,12 +12455,12 @@
          <hash>5abf2b53dff1132bef798346a2298903a54c7af59cf42ac3a2394ed25088c990</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/credentials_storage/credentials_storage.h</file>
-         <hash>d1df59d61f98088bad5d0edb37da25137bf5d7d5434060dcc9cc2152a8e343ef</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/crypto/hashes/sha1_routines.h</file>
          <hash>e7dc9368a50a5570c348fff3599acaedf8e61cc6b5b4656277b56b66ec570249</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/credentials_storage/credentials_storage.h</file>
+         <hash>d1df59d61f98088bad5d0edb37da25137bf5d7d5434060dcc9cc2152a8e343ef</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/crypto/hashes/sha1_routines.c</file>
@@ -12419,7 +12492,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/pin_manager.h</file>
-         <hash>7d441c778de6eff91688bae26829952c3fa6f9b941f9bb78cc1cc4f6c3a89228</hash>
+         <hash>b2dd3d1d838071a5760cd3621387b73961cb9c29ac63c7ea288b06bb6a5625dc</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/basic/atca_basic_ecdh.c</file>
@@ -12438,12 +12511,12 @@
          <hash>c9928f59211c30d2120fd622b361fddc65b673d598c0e9a0e2e120c52080f404</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/credentials_storage/credentials_storage.c</file>
-         <hash>d673894b282d005b272725eec48aba33aaea75021b8597ee708fb85e8f24a509</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/atca_device.c</file>
          <hash>b6de5c44cae45792701e66695fd2882f19285f11736522fc1116b20cd32b53f2</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/credentials_storage/credentials_storage.c</file>
+         <hash>d673894b282d005b272725eec48aba33aaea75021b8597ee708fb85e8f24a509</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/delay.c</file>
@@ -12502,12 +12575,12 @@
          <hash>1255c941d5f6dea56dbab21490fbaf4b55e3c6cdcec5216cf21239f48b969969</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/clock.h</file>
-         <hash>b4ad4178b4ac9e01da8458b0fa9ba690f1f464d61d614592b7c29672fcc78454</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/atca_execution.c</file>
          <hash>419ca59c8bbd8a5b74d9e1095c2daeb071f2acd52cc14d95134ecb0e27952e4b</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/clock.h</file>
+         <hash>b4ad4178b4ac9e01da8458b0fa9ba690f1f464d61d614592b7c29672fcc78454</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/clock.c</file>
@@ -12562,12 +12635,12 @@
          <hash>9c496c9e90b93cfc8e9b95d8c36d070fb1394b067da31fd466b7d1cdd9c6cd8d</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/cli/cli.h</file>
-         <hash>935ff461e834739e8b270fb1d465ce124cca03b3957d3538a4ce5afd97cb68c8</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/jwt/atca_jwt.h</file>
          <hash>97aad38e6689adbeabd332a847788f7deff5d28548df890135f6c630672883eb</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/cli/cli.h</file>
+         <hash>935ff461e834739e8b270fb1d465ce124cca03b3957d3538a4ce5afd97cb68c8</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/atca_command.h</file>
@@ -12594,12 +12667,16 @@
          <hash>261a8a74ebea2d1192205cba3ca7651458496174c87f529ed6ed5e9a6915db4a</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/cli/cli.c</file>
-         <hash>d7dcc8c54d00c182b59159c858494794e0f3ca2cd91e97e84a438b93cbae27cb</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/atcacert/atcacert_date.h</file>
          <hash>019dbd6cfbc8dac0b81959b1a05162e863efd02000fd1b6e06a7f5d966cdfeba</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/Relay_example.c</file>
+         <hash>7e15b745cdbf3fb7f98847ead6a06dc3c43d310bd52e50bf470fb0938999909d</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/cli/cli.c</file>
+         <hash>d7dcc8c54d00c182b59159c858494794e0f3ca2cd91e97e84a438b93cbae27cb</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/jwt/atca_jwt.c</file>
@@ -12620,6 +12697,10 @@
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/basic/atca_basic_verify.c</file>
          <hash>246ad1e5dacd00298faaa540cedad80a6848bd9f7653e718853e1d628859437d</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/Relay_example.h</file>
+         <hash>4c57786751ac42dc56ef90a42b1c6ff9383f87332fd343c5144397d367bdc0a7</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/winc/driver/source/m2m_hif.c</file>
@@ -12699,7 +12780,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/system.c</file>
-         <hash>9752dadbbb75a162c068cfdfcdeb71abf2cd854a8a5f28d7a77884b2f1a97d4b</hash>
+         <hash>75bed0186f9d248a8f8e5ec912d90f3b6ebb1971bcab2beec815931154cd09db</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/basic/atca_basic_sign.c</file>
@@ -12754,20 +12835,16 @@
          <hash>4eba17915abd2258fd01f0d8e96227a6714d2487e627163c0480c85a7e33af3d</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/mqtt/mqtt_core/mqtt_core.h</file>
-         <hash>a89ee047c9be0a765d48fd3b61f239569827ea07e5a4c8c4345a9ff5615329dc</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/atca_cfgs.c</file>
          <hash>3ec9bdc5b7874174a65da7141453ab323ebb94ec012c5d5f6f7e25fd1e7492ff</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/cryptoauthlib/lib/basic/atca_basic_hmac.c</file>
-         <hash>89e9eacd37071445c06bf03fb65dd8e8a65ea3ecb7cf920f42cf01642f3f9b3d</hash>
+         <file>mcc_generated_files/mqtt/mqtt_core/mqtt_core.h</file>
+         <hash>a89ee047c9be0a765d48fd3b61f239569827ea07e5a4c8c4345a9ff5615329dc</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/mqtt/mqtt_core/mqtt_core.c</file>
-         <hash>132e6d495b56974cdaec368dc2291a4176138fc33af08bb308a6f57a7656afb1</hash>
+         <file>mcc_generated_files/cryptoauthlib/lib/basic/atca_basic_hmac.c</file>
+         <hash>89e9eacd37071445c06bf03fb65dd8e8a65ea3ecb7cf920f42cf01642f3f9b3d</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/winc/driver/source/nmasic.c</file>
@@ -12776,6 +12853,10 @@
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/host/atca_host.h</file>
          <hash>10515cd7124c4784da6eb4ca8ea84332ef4464a5654c88f3f9ce01c09fa44ade</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/mqtt/mqtt_core/mqtt_core.c</file>
+         <hash>132e6d495b56974cdaec368dc2291a4176138fc33af08bb308a6f57a7656afb1</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/crypto/atca_crypto_sw.h</file>
@@ -12790,12 +12871,12 @@
          <hash>4cd09d19527ffebd9334a0d359a88fca9b58d89e9b8fbd5e00200d24ebf86ead</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/banner.h</file>
-         <hash>d0c23d8d93a53b1e05fa7dba6a80ab7b576ce6cc04eba0216e190955e92fc443</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/cryptoauthlib.h</file>
          <hash>cd2ba066d687a090f4a28c69c9f3b48acd9f7cc300247c183e6e2c9d01f5d97a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/banner.h</file>
+         <hash>d0c23d8d93a53b1e05fa7dba6a80ab7b576ce6cc04eba0216e190955e92fc443</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/winc/driver/source/nmdrv.c</file>
@@ -12934,16 +13015,16 @@
          <hash>d352d68f3d1f1d1082dbf4ba2ba48d5529e56f71728dbf70655961f34fe76991</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/mqtt/mqtt_comm_bsd/mqtt_comm_layer.c</file>
-         <hash>a5d116a4cfbe675aade52c3b56c7c00ab1e195f3c5793fcb6715c43d9cbc4e57</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/atcacert/atcacert_der.c</file>
          <hash>b8981eeb4fbf1fa17623e76f69c25306af7562154200578220e1ec2d64a43adb</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/crypto/atca_crypto_sw_rand.h</file>
          <hash>a44b9b020373e352153ad2e0dd3c8d2949a2ac8b634d4ccb2f1560d68bd67f5a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/mqtt/mqtt_comm_bsd/mqtt_comm_layer.c</file>
+         <hash>a5d116a4cfbe675aade52c3b56c7c00ab1e195f3c5793fcb6715c43d9cbc4e57</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/hal/atca_hal.h</file>
@@ -12954,12 +13035,12 @@
          <hash>62f231b966346459c742b9652c3214511ff51a634efa533869687f48e09b1cd0</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/config/IoT_Sensor_Node_config.h</file>
-         <hash>2a09e02c169c688f97efe2841beb5c19caca9107b90608ecb1f5303c5479e1d7</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/cryptoauthlib/lib/tls/atcatls.h</file>
          <hash>9ebc53216b53fb2b8b3adb07c6b23baeff99c9fb4cd147bb7c08576e67a69fe8</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/config/IoT_Sensor_Node_config.h</file>
+         <hash>2a09e02c169c688f97efe2841beb5c19caca9107b90608ecb1f5303c5479e1d7</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/winc/driver/source/nmuart.h</file>
@@ -12978,12 +13059,12 @@
          <hash>2575a4b4970c0e026ebaa752a397c4b9b3eba22b5f848a50cebc3ef556150b86</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/traps.c</file>
-         <hash>a8841d58ea3ffc705968dd955b7b54691136d33dc2061c6f6aeb06529c9353d4</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/drivers/i2c_master.h</file>
          <hash>36bb84ccc499f248a7106908086742739d3326d5e3ce09542993bafe4de7a79d</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/traps.c</file>
+         <hash>a8841d58ea3ffc705968dd955b7b54691136d33dc2061c6f6aeb06529c9353d4</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/winc/driver/include/m2m_crypto.h</file>
@@ -13094,12 +13175,12 @@
          <hash>05265069bceb410b2322aa73bc7a52d437b63798932ea384a4f42099c98ec59d</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/cloud/cloud_service.c</file>
-         <hash>5b0f67a4898415bfb0b19b6da2a74b74680219201691053e7b3eb0fcf9ef4b88</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/spi1_driver.h</file>
          <hash>06896e135e553d51ae7a624d489b2b34eec00b1c11823e4789c29598d7611f29</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/cloud/cloud_service.c</file>
+         <hash>5b0f67a4898415bfb0b19b6da2a74b74680219201691053e7b3eb0fcf9ef4b88</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/drivers/uart.c</file>
@@ -13115,7 +13196,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/drivers/timeout.h</file>
-         <hash>5357864e84a29a328dc473a1be35f6e9d586fca9f5c66514fb6c1151edec8bda</hash>
+         <hash>b2045871fc6bc3a6b1082e03e9dd498142bfa045fe7ee0ea08b83f0601b60095</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

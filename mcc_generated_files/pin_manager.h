@@ -73,11 +73,11 @@
   @Example
     <code>
     // Set RA0 high (1)
-    Relay1_SetHigh();
+    Relay_RL1_SetHigh();
     </code>
 
 */
-#define Relay1_SetHigh()          _LATA0 = 1
+#define Relay_RL1_SetHigh()          _LATA0 = 1
 /**
   @Summary
     Sets the GPIO pin, RA0, low using LATA0.
@@ -97,11 +97,11 @@
   @Example
     <code>
     // Set RA0 low (0)
-    Relay1_SetLow();
+    Relay_RL1_SetLow();
     </code>
 
 */
-#define Relay1_SetLow()           _LATA0 = 0
+#define Relay_RL1_SetLow()           _LATA0 = 0
 /**
   @Summary
     Toggles the GPIO pin, RA0, using LATA0.
@@ -121,11 +121,11 @@
   @Example
     <code>
     // Toggle RA0
-    Relay1_Toggle();
+    Relay_RL1_Toggle();
     </code>
 
 */
-#define Relay1_Toggle()           _LATA0 ^= 1
+#define Relay_RL1_Toggle()           _LATA0 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RA0.
@@ -147,11 +147,11 @@
     uint16_t portValue;
 
     // Read RA0
-    postValue = Relay1_GetValue();
+    postValue = Relay_RL1_GetValue();
     </code>
 
 */
-#define Relay1_GetValue()         _RA0
+#define Relay_RL1_GetValue()         _RA0
 /**
   @Summary
     Configures the GPIO pin, RA0, as an input.
@@ -171,11 +171,11 @@
   @Example
     <code>
     // Sets the RA0 as an input
-    Relay1_SetDigitalInput();
+    Relay_RL1_SetDigitalInput();
     </code>
 
 */
-#define Relay1_SetDigitalInput()  _TRISA0 = 1
+#define Relay_RL1_SetDigitalInput()  _TRISA0 = 1
 /**
   @Summary
     Configures the GPIO pin, RA0, as an output.
@@ -195,11 +195,11 @@
   @Example
     <code>
     // Sets the RA0 as an output
-    Relay1_SetDigitalOutput();
+    Relay_RL1_SetDigitalOutput();
     </code>
 
 */
-#define Relay1_SetDigitalOutput() _TRISA0 = 0
+#define Relay_RL1_SetDigitalOutput() _TRISA0 = 0
 /**
   @Summary
     Sets the GPIO pin, RA10, high using LATA10.
@@ -2409,11 +2409,11 @@
   @Example
     <code>
     // Set RC6 high (1)
-    Relay2_SetHigh();
+    Relay_RL2_SetHigh();
     </code>
 
 */
-#define Relay2_SetHigh()          _LATC6 = 1
+#define Relay_RL2_SetHigh()          _LATC6 = 1
 /**
   @Summary
     Sets the GPIO pin, RC6, low using LATC6.
@@ -2433,11 +2433,11 @@
   @Example
     <code>
     // Set RC6 low (0)
-    Relay2_SetLow();
+    Relay_RL2_SetLow();
     </code>
 
 */
-#define Relay2_SetLow()           _LATC6 = 0
+#define Relay_RL2_SetLow()           _LATC6 = 0
 /**
   @Summary
     Toggles the GPIO pin, RC6, using LATC6.
@@ -2457,11 +2457,11 @@
   @Example
     <code>
     // Toggle RC6
-    Relay2_Toggle();
+    Relay_RL2_Toggle();
     </code>
 
 */
-#define Relay2_Toggle()           _LATC6 ^= 1
+#define Relay_RL2_Toggle()           _LATC6 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RC6.
@@ -2483,11 +2483,11 @@
     uint16_t portValue;
 
     // Read RC6
-    postValue = Relay2_GetValue();
+    postValue = Relay_RL2_GetValue();
     </code>
 
 */
-#define Relay2_GetValue()         _RC6
+#define Relay_RL2_GetValue()         _RC6
 /**
   @Summary
     Configures the GPIO pin, RC6, as an input.
@@ -2507,11 +2507,11 @@
   @Example
     <code>
     // Sets the RC6 as an input
-    Relay2_SetDigitalInput();
+    Relay_RL2_SetDigitalInput();
     </code>
 
 */
-#define Relay2_SetDigitalInput()  _TRISC6 = 1
+#define Relay_RL2_SetDigitalInput()  _TRISC6 = 1
 /**
   @Summary
     Configures the GPIO pin, RC6, as an output.
@@ -2531,11 +2531,11 @@
   @Example
     <code>
     // Sets the RC6 as an output
-    Relay2_SetDigitalOutput();
+    Relay_RL2_SetDigitalOutput();
     </code>
 
 */
-#define Relay2_SetDigitalOutput() _TRISC6 = 0
+#define Relay_RL2_SetDigitalOutput() _TRISC6 = 0
 
 /**
     Section: Function Prototypes

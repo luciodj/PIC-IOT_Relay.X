@@ -53,30 +53,29 @@
 #include "mcc_generated_files/sensors_handling.h"
 #include "mcc_generated_files/cloud/cloud_service.h"
 #include "mcc_generated_files/debug_print.h"
-#include "mcc_generated_files/pin_manager.h"
 
 //This handles messages published from the MQTT server when subscribed
 void receivedFromCloud(uint8_t *topic, uint8_t *payload)
 {
-    char *relay1Token = "\"Relay1\":";
-    char *relay2Token = "\"Relay2\":";
+    char *rl1Token = "\"RL1\":";
+    char *rl2Token = "\"RL2\":";
     char *subString;
 
-    if ((subString = strstr((char*)payload, relay1Token)))
+    if ((subString = strstr((char*)payload, rl1Token)))
     {
-        if ( subString[strlen(relay1Token)] == '1' ) Relay1_SetHigh();
-        else Relay1_SetLow();
+        if ( subString[strlen(rl1Token)] == '1' ) RELAY_RL1_Engage();
+        else RELAY_RL1_Disengage();
     }
-    if ((subString = strstr((char*)payload, relay2Token)))
+    if ((subString = strstr((char*)payload, rl2Token)))
     {
-        if ( subString[strlen(relay2Token)] == '1' ) Relay2_SetHigh();
-        else Relay2_SetLow();
+        if ( subString[strlen(rl2Token)] == '1' ) RELAY_RL2_Engage();
+        else RELAY_RL2_Disengage();
     }
 
-
-    debug_printer(SEVERITY_NONE, LEVEL_NORMAL, "topic: %s", topic);
+//    debug_printer(SEVERITY_NONE, LEVEL_NORMAL, "topic: %s", topic);
     debug_printer(SEVERITY_NONE, LEVEL_NORMAL, "payload: %s", payload);
 }
+
 
 // This will get called every 1 second only while we have a valid Cloud connection
 void sendToCloud(void)
